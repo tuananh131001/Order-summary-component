@@ -16,7 +16,9 @@ body{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    background: url(./images/pattern-background-mobile.svg) no-repeat;
     background-color: var(--Pale-blue);
+    background-size: contain;
     font-family: 'Red Hat Display', sans-serif;
 }
 main{
@@ -49,7 +51,7 @@ main{
 }
 .card-body h2{
     text-align: center;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.8rem;
     color: var(--Desaturated-blue);
@@ -91,15 +93,37 @@ main .card-body .music {
     border-radius: 0.5rem;
     border: 1px solid var(--Bright-blue);
     box-shadow: 0px 14px 6px 2px var(--Pale-blue);
-
 }
+.card-body .change:hover,
 .card-body button:hover{
-    cursor: pointer;
+    opacity: 0.7;
 }
+
 .card-body .cancel{
     font-weight: 900;
     font-size: 0.9rem;
 }
 .card-body .cancel:hover{
+    color: var(--Dark-blue);
+}
+
+.card-body .change:hover,
+.card-body button:hover,
+.card-body .cancel:hover{
     cursor: pointer;
+}
+
+/* Desktop */
+@media screen and (min-width: 32rem) {
+    body{
+        background: url(./images/pattern-background-desktop.svg) no-repeat;
+        background-color: var(--Pale-blue);
+        background-size: contain;
+    }
+    main{
+        width: 23rem;
+    }
+    main .card-body .music{
+        gap:4rem;
+    }
 }
